@@ -550,7 +550,7 @@ int main(void)
 			}
 			fprintf(file, "%i\n", bots[b].gcode[i]);
 			v = 0;
-			printf("%i %i\n", k / 1000, last);
+			printf("%i %i %i\n", k / 1000, last, food);
 		}
 		for (j = 0; rand() % 100 < food; j++) {
 			px = rand() % WIDTH;
