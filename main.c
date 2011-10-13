@@ -522,6 +522,7 @@ int main(void)
 	float comp;
 	char buf[20];
 	while (!keypress) {
+	  food = 60 - 50 * last / (float)(SX * SY);
 		++k;
 		for (i = 0; i < last; i++) {
 			compute(&bots[i], lb);
