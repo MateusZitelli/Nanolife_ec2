@@ -24,7 +24,7 @@
 #define WIDTH 200
 #define HEIGHT 200
 
-#define MEM_SIZE 128
+#define MEM_SIZE 64
 #define MAX_AGE 600.0
 
 int last;
@@ -536,7 +536,7 @@ int main(void)
 			} else {
 				bots[i] = bots[--last];
 			}
-			if (k % 1000 == 0) {
+			if (k % 100 == 0) {
 				if (bots[i].energy > v
 				    && bots[i].generation > 20) {
 					b = i;
@@ -544,13 +544,13 @@ int main(void)
 				}
 			}
 		}
-		if (k % 1000 == 0) {
+		if (k % 100 == 0) {
 			for (i = 0; i < MEM_SIZE - 1; i++) {
 				fprintf(file, "%i, ", bots[b].gcode[i]);
 			}
 			fprintf(file, "%i\n", bots[b].gcode[i]);
 			v = 0;
-			printf("%i %i %i\n", k / 1000, last, food);
+			printf("%i %i %i\n", k / 100, last, food);
 		}
 		for (j = 0; rand() % 100 < food; j++) {
 			px = rand() % WIDTH;
