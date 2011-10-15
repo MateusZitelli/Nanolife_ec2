@@ -19,12 +19,12 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#define SX 200
-#define SY 200
-#define WIDTH 200
-#define HEIGHT 200
+#define SX 600
+#define SY 600
+#define WIDTH 600
+#define HEIGHT 600
 
-#define MEM_SIZE 64
+#define MEM_SIZE 100
 #define MAX_AGE 600.0
 
 int last;
@@ -522,7 +522,7 @@ int main(void)
 	float comp;
 	char buf[20];
 	while (!keypress) {
-	  food = 60 - 80 * last / (float)(SX * SY);
+	  food = 70 - 100 * last / (float)(SX * SY);
 		++k;
 		for (i = 0; i < last; i++) {
 			compute(&bots[i], lb);
